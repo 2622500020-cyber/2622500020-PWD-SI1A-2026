@@ -1,103 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8fafc;
-            margin: 0;
-            padding: 30px;
-        }
-
-        fieldset {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #d0d7de;
-            border-radius: 8px;
-            background: #ffffff;
-        }
-
-        legend {
-            font-weight: bold;
-            color: #0f172a;
-            padding: 0 10px;
-        }
-
-        label {
-            font-weight: bold;
-            color: #0f172a;
-        }
-
-        input[type="text"],
-        input[type="password"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0 15px;
-            border: 1px solid #cbd5e1;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        textarea {
-            height: 100px;
-            resize: vertical;
-        }
-
-        input[type="radio"],
-        input[type="checkbox"] {
-            margin-right: 5px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background: #1d4ed8;
-        }
-    </style>
+    <title>Profil Mahasiswa</title>
 </head>
 
 <body>
-    <fieldset>
-        <legend>Data Pribadi</legend>
-        <form action="" method="POST">
-            Nama : <input type="text" name="nama">
-            Password : <input type="password" name="password">
-            Jenis Kelamin : <input type="radio" name="jenis_kelamin" value="Laki-laki" checked> Laki-laki
-            <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
-            Tanggal Lahir : <input type="date" name="tanggal_lahir">
 
-            Program Studi :
-            <select name="prodi">
-                <option value="si" selected>Sistem Informasi</option>
-                <option value="ti">Teknik Informatika</option>
-                <option value="bd">Bisnis Digital</option>
-            </select>
-            Hobi : <input type="checkbox" name="hobi_baca">Membaca
-            <input type="checkbox" name="hobi_traveling">Traveling
-            <input type="checkbox" name="hobi_masak">Masak
-            Alamat : <textarea name="alamat"></textarea>
-            <input type="submit" name="submit" value="Kirim">
-        </form>
-    </fieldset>
+    <!-- Header / Judul Utama -->
+    <header>
+        <h1>Profil Mahasiswa</h1>
+        <!-- Navigasi Menu -->
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+        <!-- Bagian Beranda / Selamat Datang -->
+        <section id="beranda">
+            <h2>Selamat Datang</h2>
+            <p>Halo, saya Reni Widiastuti. Saya sedang mempelajari Pemrograman Web Dasar.</p>
+
+            <!-- Gambar Foto Profil -->
+            <img src="img/foto-profil.jpg" alt="Foto profil Reni Widiastuti">
+        </section>
+
+        <!-- Bagian Tentang Saya -->
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+
+            <article>
+                <h3>Profil Singkat</h3>
+                <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
+            </article>
+
+            <article>
+                <h3>Target Belajar</h3>
+                <!-- Daftar Terurut (Numbered List) -->
+                <ol>
+                    <li>Memahami struktur HTML5</li>
+                    <li>Menyusun halaman web semantik</li>
+                    <li>Memvalidasi dokumen HTML</li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- Bagian Kontak -->
+        <section id="kontak">
+            <h2>Kontak</h2>
+            <p>Kunjungi <a href="https://github.com/2622500020-cyber">profil GitHub saya</a>.</p>
+
+            <form action="index.html" method="get">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label><br>
+                    <input class="input-form" 
+                           type="text" 
+                           id="nama" 
+                           name="nama" 
+                           placeholder="Masukkan nama lengkap"
+                           minlength="3" 
+                           maxlength="50" 
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label><br>
+                    <input class="input-form" 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="nama@email.com"
+                            required>
+                </div>
+
+                <div class="form-group">
+                    <label for="semester">Semester</label><br>
+                    <input class="input-form"
+                            type="number" 
+                            id="semester"
+                            name="semester"
+                            min="1" 
+                            max="14" 
+                            required>
+                </div>
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Kunjungan</label><br>
+                    <input class="input-form" 
+                            type="date" 
+                            id="tanggal"
+                            name="tanggal"
+                            required>
+                </div>
+
+                <div class="form-group">
+                    <p>Jenis Pesan</p>
+                    <input type="radio" id="pertanyaan" name="jenis_pesan"
+                            value="pertanyaan" required>
+                    <label for="pertanyaan">Pertanyaan</label>
+                    <input type="radio" id="saran" name="jenis_pesan"
+                            value="saran">
+                    <label for="saran">Saran</label>
+                </div>
+
+                <div class="form-group">
+                    <p>Topik yang Diminati</p>
+                    <input type="checkbox" id="minat-html" name="minat" value="HTML">
+                    <label for="minat-html">HTML</label>
+                    <input type="checkbox" id="minat-css" name="minat" value="CSS">
+                    <label for="minat-css">CSS</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="prodi">Program Studi</label><br>
+                    <select class="input-form" id="prodi" name="prodi" required>
+                        <option value="">-- Pilih Program Studi --</option>
+                        <option value="SI">Sistem Informasi</option>
+                        <option value="TI">Teknik Informatika</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pesan">Pesan</label><br>
+                    <textarea class="input-form" 
+                                id="pesan" 
+                                name="pesan" 
+                                maxlength="300" 
+                                placeholder="Tulis pesan Anda"
+                                required></textarea>
+                </div>
+                <button type="submit">Kirim</button>
+                <button type="reset">Batal</button>
+            </form>
+        </section>
+        
+    <!-- Footer / Bagian Bawah -->
+    <footer>
+        <p>&copy; 2026 Reni Widiastuti (2622500020)</p>
+    </footer>
+
 </body>
 
 </html>
