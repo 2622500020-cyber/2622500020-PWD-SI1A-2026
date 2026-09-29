@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            margin: 0;
+            padding: 30px;
+        }
+
+        fieldset {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #0f172a;
+            padding: 0 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #0f172a;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #1d4ed8;
+        }
+    </style>
 </head>
+
 <body>
     <fieldset>
         <legend>Data Pribadi</legend>
@@ -12,7 +82,7 @@
             Nama : <input type="text" name="nama">
             Password : <input type="password" name="password">
             Jenis Kelamin : <input type="radio" name="jenis_kelamin" value="Laki-laki" checked> Laki-laki
-                            <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+            <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
             Tanggal Lahir : <input type="date" name="tanggal_lahir">
 
             Program Studi :
@@ -22,11 +92,12 @@
                 <option value="bd">Bisnis Digital</option>
             </select>
             Hobi : <input type="checkbox" name="hobi_baca">Membaca
-                    <input type="checkbox" name="hobi_traveling">Traveling
-                    <input type="checkbox" name="hobi_masak">Masak
+            <input type="checkbox" name="hobi_traveling">Traveling
+            <input type="checkbox" name="hobi_masak">Masak
             Alamat : <textarea name="alamat"></textarea>
             <input type="submit" name="submit" value="Kirim">
         </form>
     </fieldset>
 </body>
+
 </html>
