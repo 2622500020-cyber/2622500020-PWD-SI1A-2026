@@ -1,46 +1,44 @@
-<!DOCTYPE html>
+<doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Mahasiswa</title>
-    <style>
-      #about {
-        background-color: #ffffff;
-        border: 1px solid #d0d7de;
-        padding: 20px;
-        margin: 20px 0;
-        font-family: Arial, sans-serif;
-      }
-      #about h2 {
-        color: #003366;
-        border-bottom: 2px solid #003366;
-        padding-bottom: 6px;
-        margin-bottom: 16px;
-      }
-      #about h3 {
-        color: #1f4e78;
-        margin-bottom: 6px;
-      }
-      #about p {
-        margin: 6px 0;
-        padding: 6px 0;
-        border-bottom: 1px solid #e6e6e6;
-      }
-      #about ol {
-        color: #333333;
-        margin: 8px 0;
-        padding: 8px 24px;
-        border: 1px solid #e6e6e6;
-      }
-    </style>
-</head>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Profil Mahasiswa</title>
+      <style>
+        #about {
+          background-color: #ffffff;
+          border: 1px solid #d0d7de;
+          padding: 20px;
+          margin: 20px 0;
+          font-family: Arial, sans-serif;
+        }
+        #about h2 {
+          color: #003366;
+          border-bottom: 2px solid #003366;
+          padding-bottom: 6px;
+          margin-bottom: 16px;
+        }
+        #about h3 {
+          color: #1f4e78;
+          margin-bottom: 6px;
+        }
+        #about p {
+          margin: 6px 0;
+          padding: 6px 0;
+          border-bottom: 1px solid #e6e6e6;
+        }
+        #about ol {
+          color: #333333;
+          margin: 8px 0;
+          padding: 8px 24px;
+          border: 1px solid #e6e6e6;
+        }
+     </style>
+    </head>
 
 <body>
-    <!-- Header / Judul Utama -->
     <header>
         <h1>Profil Mahasiswa</h1>
-        <!-- Navigasi Menu -->
         <nav>
             <ul>
                 <li><a href="#beranda">Beranda</a></li>
@@ -49,46 +47,34 @@
             </ul>
         </nav>
     </header>
-
-    <!-- Konten Utama -->
     <main>
-        <!-- Bagian Beranda / Selamat Datang -->
         <section id="beranda">
             <h2>Selamat Datang</h2>
             <p>Halo, saya Reni Widiastuti. Saya sedang mempelajari Pemrograman Web Dasar.</p>
-
-            <!-- Gambar Foto Profil -->
             <img src="img/foto-profil.jpg" alt="Foto profil Reni Widiastuti">
         </section>
 
-        <!-- Bagian Tentang Saya -->
-        <section id="tentang">
+        <section id="about">
             <h2>Tentang Saya</h2>
-
             <article>
                 <h3>Profil Singkat</h3>
-                <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
-            </article>
-
-            <article>
+                <p>Saya mahasiswa Program Studi Sistem Informasi</p>
+        
                 <h3>Target Belajar</h3>
-                <!-- Daftar Terurut (Numbered List) -->
                 <ol>
-                    <li>Memahami struktur HTML5</li>
-                    <li>Menyusun halaman web semantik</li>
-                    <li>Memvalidasi dokumen HTML</li>
+                    <li>Memahami struktur HTML5.</li>
+                    <li>Menyusun halaman web semantik.</li>
+                    <li>Memvalidasi dokumen HTML.</li>
                 </ol>
             </article>
         </section>
-
-        <!-- Bagian Kontak -->
-        <section id="kontak">
+        <section id="contact">
             <h2>Kontak</h2>
             <p>Kunjungi <a href="https://github.com/2622500020-cyber">profil GitHub saya</a>.</p>
 
-            <form action="index.html" method=get">
+            <form action="index.html" method="get">
                 <div class="form-group">
-                    <label for="nama">Nama Lengkap</label><br>
+                    <label for="nama">Masukan Nama Lengkap</label><br>
                     <input class="input-form" 
                            type="text" 
                            id="nama" 
@@ -119,6 +105,7 @@
                             max="14" 
                             required>
                 </div>
+
                 <div class="form-group">
                     <label for="tanggal">Tanggal Kunjungan</label><br>
                     <input class="input-form" 
@@ -130,8 +117,11 @@
 
                 <div class="form-group">
                     <p>Jenis Pesan</p>
-                    <input type="radio" id="pertanyaan" name="jenis_pesan"
-                            value="pertanyaan" required>
+                    <input type="radio" 
+                            id="pertanyaan" 
+                            name="jenis_pesan"
+                            value="pertanyaan" 
+                            required>
                     <label for="pertanyaan">Pertanyaan</label>
                     <input type="radio" id="saran" name="jenis_pesan"
                             value="saran">
@@ -164,16 +154,15 @@
                                 placeholder="Tulis pesan Anda"
                                 required></textarea>
                 </div>
+
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
             </form>
         </section>
-
-    <!-- Footer / Bagian Bawah -->
+    </main
+>
     <footer>
         <p>&copy; 2026 Reni Widiastuti (2622500020)</p>
     </footer>
-
 </body>
-
 </html>
